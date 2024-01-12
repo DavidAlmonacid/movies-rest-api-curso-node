@@ -1,11 +1,23 @@
 ### Get all movies
 GET http://localhost:3000/movies
 
+###
+GET https://movies-rest-api-curso-node.onrender.com/movies
+
+
 ### Get a movie by id
 GET http://localhost:3000/movies/de45f0a4-9930-402a-b1bf-747ba4660430
 
+###
+GET https://movies-rest-api-curso-node.onrender.com/movies/a8334b54-38f5-4ebb-8e06-803a61698589
+
+
 ### Filter movies by genre
 GET http://localhost:3000/movies?genre=fantasy
+
+###
+GET https://movies-rest-api-curso-node.onrender.com/movies?genre=faNtasy
+
 
 ### Create a movie
 POST http://localhost:3000/movies
@@ -24,8 +36,43 @@ Content-Type: application/json
   ]
 }
 
+###
+POST https://movies-rest-api-curso-node.onrender.com/movies
+Content-Type: application/json
+
+{
+  "sql": "SELECT * FROM movies",
+  "title": "The Godfather",
+  "year": 1975,
+  "duration": 175,
+  "director": "Francis Ford Coppola",
+  "poster": "https://img.fruugo.com/product/4/49/14441494_max.jpg",
+  "genre": [
+    "Crime",
+    "Drama"
+  ]
+}
+
+
 ### Update a movie
 PATCH http://localhost:3000/movies/de45f0a4-9930-402a-b1bf-747ba4660430
+Content-Type: application/json
+
+{
+  "title": "The Lord of the Rings: The Return of the King",
+  "year": 2024,
+  "rate": 9.5,
+  "abc": "abc",
+  "genre": [
+    "Action",
+    "Adventure",
+    "Drama",
+    "Fantasy"
+  ]
+}
+
+###
+PATCH https://movies-rest-api-curso-node.onrender.com/movies/a8334b54-38f5-4ebb-8e06-803a61698589
 Content-Type: application/json
 
 {
@@ -44,3 +91,6 @@ Content-Type: application/json
 
 ### Delete a movie
 DELETE http://localhost:3000/movies/a930fc66-a421-4bd6-afae-41becf074e4e
+
+###
+DELETE https://movies-rest-api-curso-node.onrender.com/movies/5e090195-570e-46fa-9855-db977c5b71ce
